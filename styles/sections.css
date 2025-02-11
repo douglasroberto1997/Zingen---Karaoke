@@ -1,32 +1,42 @@
-#smartphones-img {
-  margin-top: 5rem;
-  background: url(../assets/illustration.svg) top/cover;
-}
+a.social {
+  --bg-img: '';
+  background-image: var(--bg-img);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
 
-section {
-  & header {
-    & strong {
-      display: block;
-      font: var(--fw-md) var(--fs-sm) / 100% var(--ff-sans);
-      letter-spacing: 0.08rem;
-      text-transform: uppercase;
+  -webkit-background-clip: initial;
+  background-clip: initial;
 
-      color: var(--brand-color-primary);
-    }
+  &[aria-label='tiktok'] {
+    --bg-img: url(../assets/icons/tiktok.svg);
 
-    & h2 {
-      margin-top: 0.5rem;
+    &:hover {
+      --bg-img: url(../assets/icons/tiktok-hover.svg);
     }
   }
 
-  & p {
-    margin-top: 0.5rem;
-    color: var(--text-color-secondary);
-  }
-}
+  &[aria-label='instagram'] {
+    --bg-img: url(../assets/icons/instagram.svg);
 
-@media (width >= 80em) {
-  #smartphones-img {
-    display: none;
+    &:hover {
+      --bg-img: url(../assets/icons/instagram-hover.svg);
+    }
+  }
+
+  &[aria-label='twitter'] {
+    --bg-img: url(../assets/icons/twitter.svg);
+
+    &:hover {
+      --bg-img: url(../assets/icons/twitter-hover.svg);
+    }
+  }
+
+  &[aria-label='discord'] {
+    --bg-img: url(../assets/icons/discord.svg);
+
+    &:hover {
+      --bg-img: url(../assets/icons/discord-hover.svg);
+    }
   }
 }
